@@ -10,7 +10,7 @@ spring:
       routes:
         # Para rutas que empiezan con /auth-service/
         - id: auth-service-routes
-          uri: lb://auth-service  # Este debe ser el nombre EXACTO que aparece en Eureka
+          uri: lb://AUTH-SERVICE # Este debe ser el nombre EXACTO que aparece en Eureka
           predicates:
             - Path=/auth-service/**
           filters:
@@ -18,7 +18,7 @@ spring:
             
         # Para rutas que empiezan con /catalog-service/  
         - id: catalog-service-routes
-          uri: lb://catalog-service
+          uri: lb://CATALOG-SERVICE
           predicates:
             - Path=/catalog-service/**
           filters:
