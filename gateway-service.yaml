@@ -15,9 +15,9 @@ spring:
           filters:
             - StripPrefix=1
         - id: other-services
-          uri: lb://OTHER-SERVICE-NAME  # Reemplaza con tu servicio
+          uri: lb://catalog-service
           predicates:
-            - Path=/api/**
+            - Path=/catalog/**
           filters:
             - StripPrefix=1
 
